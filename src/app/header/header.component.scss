@@ -1,0 +1,157 @@
+.header {
+  background-color: #4B565E;
+  padding: 25px 100px;
+  font-family: "Inter", sans-serif;
+  color: #F9FAFB;
+}
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Inter", sans-serif;
+
+}
+
+.header__logo {
+  display: flex;
+
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  color: #F9FAFB;
+  margin-right: auto;
+  margin-left: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.header__nav-item {
+  display: flex;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+
+}
+.header__buttons {
+}
+.header__button--phone-img{
+  display: block;
+  margin: 0 10px 0 0;
+
+  outline: none;
+}
+.header__button--phone-number {
+  display: block;
+  margin: 0 40px 0 0;
+
+}
+
+.header__button--favorites {
+  display: block;
+  margin: 0 15px 0 0;
+}
+
+.header__button--favorites-img {
+  display: block;
+  margin: 0 14px 0 0;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #F0BA4E;
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+.shopping-cart__img {
+  display: block;
+  margin: 0 10px 0 0;
+}
+
+.shopping-cart__counter {
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.menu {
+  background-color: #F0BA4E;
+}
+.menu__container {
+  padding: 5px 100px;
+  display: flex;
+  align-items: center;
+}
+.menu__burger-button {
+  display: block;
+  height: 16px;
+  width: 24px;
+  margin-right: 4px;
+}
+.menu__nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+.menu__nav-item {
+  display: flex;
+}
+.menu__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 25px;
+  position: relative;
+}
+.menu__input {
+  display: block;
+  width: 400px;
+  height: 28px;
+  background-color: transparent;
+  border-bottom: 1px solid #3C3C3B;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+}
+.menu__icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  fill: #666;
+}
+.menu__location {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+.menu__location-icon {
+  cursor: pointer;
+}
+.menu__location-place {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
