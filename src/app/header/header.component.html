@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="header__container">
+    <img class="header__logo" ngSrc="assets/logo-ege.svg" alt="лого" height="40" width="61">
+    <div class="header__nav">
+      <a class="header__nav-item" routerLink="/users">Пользователи</a>
+      <a class="header__nav-item" routerLink ="/">О компании</a>
+      <a class="header__nav-item" routerLink ="/">Каталог</a>
+    </div>
+    <div class="header__buttons">
+      <img ngSrc="assets/phone-img.svg" alt="телефон" class="header__button--phone-img" height="28" width="28">
+      <button class="header__button--phone-number">+7 (965) 084-29-29</button>
+      <button  class="header__button--favorites">
+        <img ngSrc="assets/favourites.svg" alt="избранное" class="header__button--favorites-img" height="21" width="24">
+      </button>
+      <div (click)="isShowImg=!isShowImg" class="header__button shopping-cart">
+        <img ngSrc="assets/shopping-cart-img.svg" alt="корзина" class="shopping-cart__img" height="28" width="28">
+        <span class="shopping-cart__counter">Пусто</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isShowImg" class="menu">
+  <div class="menu__container">
+    <img   src="assets/burger-button.svg" alt="бургер-кнопка" class="menu__burger-button">
+    <div class="menu__nav">
+      <a class="menu__nav-item" href ="/" *ngFor="let item of menuItems">{{item}}</a>
+    </div>
+    <div class="menu__search">
+      <input type="text" class="menu__input" placeholder="Поиск, например Круг зачистной">
+      <img src="assets/loupe-search.svg" alt="поиск" class="menu__icon">
+    </div>
+    <div class="menu__location">
+      <img src="assets/location-icon.svg" alt="локация" class="menu__location-icon">
+      <span class="menu__location-place">Москва</span>
+    </div>
+  </div>
+</div>
