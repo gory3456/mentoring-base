@@ -1,8 +1,8 @@
 .header {
-  background-color: #4B565E;
+  background-color: #4b565e;
   padding: 25px 100px;
-  font-family: "Inter", sans-serif;
-  color: #F9FAFB;
+  font-family: 'Inter', sans-serif;
+  color: #f9fafb;
 }
 .header__container {
   width: 100%;
@@ -10,28 +10,23 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  font-family: "Inter", sans-serif;
-
+  font-family: 'Inter', sans-serif;
 }
-
 .header__logo {
   display: flex;
-
 }
-
 .header__nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  color: #F9FAFB;
+  color: #f9fafb;
   margin-right: auto;
   margin-left: 30px;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
 }
-
 .header__nav-item {
   display: flex;
   text-decoration: none;
@@ -39,57 +34,44 @@
   margin: 0;
   border: none;
   outline: none;
-
 }
-.header__buttons {
-}
-.header__button--phone-img{
+.header__button--phone-img {
   display: block;
   margin: 0 10px 0 0;
-
   outline: none;
+}
+.header__img-cart {
+  background-color: #4b565e;
 }
 .header__button--phone-number {
   display: block;
   margin: 0 40px 0 0;
-
 }
-
 .header__button--favorites {
   display: block;
   margin: 0 15px 0 0;
 }
-
 .header__button--favorites-img {
   display: block;
   margin: 0 14px 0 0;
 }
-
 .shopping-cart {
   display: flex;
   align-items: center;
-
-  border: 1px solid #F0BA4E;
+  border: 1px solid #f0ba4e;
   border-radius: 50px;
   padding: 5px 10px;
 }
-
 .shopping-cart__img {
   display: block;
   margin: 0 10px 0 0;
 }
-
-.shopping-cart__counter {
-}
-
 .header__buttons {
   display: flex;
   flex-direction: row;
 }
-
-
 .menu {
-  background-color: #F0BA4E;
+  background-color: #f0ba4e;
 }
 .menu__container {
   padding: 5px 100px;
@@ -128,7 +110,7 @@
   width: 400px;
   height: 28px;
   background-color: transparent;
-  border-bottom: 1px solid #3C3C3B;
+  border-bottom: 1px solid #3c3c3b;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -154,4 +136,14 @@
   font-weight: 500;
   font-size: 14px;
   color: #fff;
+}
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+.admin__button {
+  cursor: pointer;
+  border-radius: 5px;
 }

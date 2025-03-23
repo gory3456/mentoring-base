@@ -1,0 +1,27 @@
+<div class="create-form__container">
+  <form class="create-form" [formGroup]="form" (ngSubmit)="submitForm()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" class="form-input" formControlName="name" />
+      <mat-error *ngIf="form.get('name')?.hasError('required')">Name is required</mat-error>
+      <mat-error *ngIf="form.get('name')?.hasError('minLength')">Min length is 2</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="text" class="form-input" formControlName="email" />
+      <mat-error *ngIf="form.get('name')?.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="form.get('name')?.hasError('email')">Email is not valid</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Website</mat-label>
+      <input matInput type="text" class="form-input" formControlName="website" />
+      <mat-error *ngIf="form.get('website')?.hasError('required')">Website is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Company name</mat-label>
+      <input matInput type="text" class="form-input" formControlName="companyName" />
+      <mat-error *ngIf="form.get('companyName')?.hasError('required')">Company name is required</mat-error>
+    </mat-form-field>
+    <button mat-button type="submit" class="create-form__button" [disabled]="form.invalid">CREATE USER</button>
+  </form>
+</div>

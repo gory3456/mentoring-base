@@ -1,6 +1,8 @@
-<div class="users-list">
-	<div *ngFor="let item of users" class="users-list__user user">
-		<app-user-card [user]="item" (deleteUser)="deleteUser($event)"></app-user-card>
-	</div>
-</div>
+<app-header></app-header>
+<app-create-user-form (createUser)="createUser($event)"></app-create-user-form>
 
+<div class="users-list">
+  <div *ngFor="let item of usersService.users$ | async" class="users-list__user user" appShadowDirective>
+    <app-user-card [user]="item" (deleteUser)="deleteUser($event)" (editUser)="editUser($event)"></app-user-card>
+  </div>
+</div>

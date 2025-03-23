@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4b565e, #4b565e);
+  width: 100%;
+  height: 100%;
+  border: 3px solid #f0ba4e;
+}
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.button {
+  width: 150px;
+}
+.title {
+  margin-bottom: 10px;
+}
