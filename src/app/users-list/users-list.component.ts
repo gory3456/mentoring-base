@@ -8,7 +8,7 @@ import { CreateUserFormComponent } from '../create-user-form/create-user-form.co
 import { HeaderComponent } from '../header/header.component';
 import { ShadowDirectiveDirective } from '../directives/shadow-directive.directive';
 import { User } from '../interfaces/user';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
 @Component({
   selector: 'app-users-list',
   standalone: true,
@@ -22,7 +22,6 @@ export class UsersListComponent {
   readonly usersService = inject(UsersService);
   users$ = this.usersService.users$;
   private readonly LocalStorageService = inject(LocalStorageService);
-  destroyRef = inject(DestroyRef);
 
   ngOnInit(): void {
     const usersFromStorage = this.LocalStorageService.getUsers();
@@ -30,10 +29,7 @@ export class UsersListComponent {
     if (usersFromStorage && usersFromStorage.length) {
       this.usersService.setUsers(usersFromStorage);
     } else {
-      this.usersApiService
-        .getUsers()
-        .pipe(takeUntilDestroyed(this.destroyRef))
-        .subscribe(users => this.usersService.setUsers(users));
+      this.usersApiService.getUsers().subscribe(users => this.usersService.setUsers(users));
     }
   }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 
 export interface IUser {
   name: string;
@@ -28,7 +28,7 @@ export class UserService {
   }
 
   public get isAdmin() {
-    return this.userSubject$.value?.isAdmin;
+    return this.user$.pipe(map(user => user?.isAdmin ?? null));
   }
 
   public logout(): void {
