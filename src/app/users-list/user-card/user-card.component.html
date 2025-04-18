@@ -1,11 +1,10 @@
 <div class="user-list__wrapper user">
   <p class="user__name">{{ user.name | truncate: 5 }}</p>
-  <p class="user__company-name">{{ user.company.name }}</p>
+  <p class="user__company-name">{{ user.company?.name }}</p>
   <div class="user__info">
     <p class="user__email">{{ user.email }}</p>
     <p class="user__website">{{ user.website }}</p>
-    <p class="user__phone">{{ user.phone }}</p>
   </div>
-  <button mat-button mat-raised-button (click)="onDeleteUser(user.id)" class="users__list-delete">Delete</button>
-  <button mat-button mat-raised-button (click)="openDialog()" class="users__list-edit">Edit</button>
+  <button mat-button mat-raised-button (click)="onDeleteUser(user)" class="users__list-delete">Delete</button>
+  <button mat-button mat-raised-button (click)="onEditUser(user)" class="users__list-edit">Edit</button>
 </div>

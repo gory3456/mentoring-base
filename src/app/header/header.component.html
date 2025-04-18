@@ -5,7 +5,6 @@
       <a class="header__nav-item" routerLink="/users">Пользователи</a>
       <a class="header__nav-item" routerLink="">О компании</a>
       <a class="header__nav-item" routerLink="">Каталог</a>
-      <a class="header__nav-item" routerLink="/client">Админка</a>
 
       <p class="header__nav-item">{{ today | date: 'medium' }}</p>
     </div>
@@ -17,13 +16,9 @@
       <button class="header__button--favorites">
         <img ngSrc="assets/favourites.svg" alt="избранное" class="header__button--favorites-img" height="21" width="24" />
       </button>
-      <div (click)="isShowImg = !isShowImg" class="header__button shopping-cart" appHoverDirective class="header__img-cart">
+      <div (click)="isShowImg = !isShowImg" class="header__button shopping-cart" appHoverDirective>
         <img ngSrc="assets/shopping-cart-img.svg" alt="корзина" class="shopping-cart__img" height="28" width="28" />
         <span class="shopping-cart__counter">Пусто</span>
-      </div>
-      <div class="admin">
-        <button class="admin__button admin__button--login" (click)="openDialog()" *ngIf="(this.userService.user$ | async) === null">Войти</button>
-        <button class="admin__button admin__button--logout" (click)="logout()" *ngIf="(this.userService.user$ | async) !== null">Выйти</button>
       </div>
     </div>
   </div>

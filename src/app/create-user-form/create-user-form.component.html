@@ -1,5 +1,5 @@
 <div class="create-form__container">
-  <form class="create-form" [formGroup]="form" (ngSubmit)="submitForm()">
+  <form class="create-form" [formGroup]="form">
     <mat-form-field>
       <mat-label>Name</mat-label>
       <input matInput type="text" class="form-input" formControlName="name" />
@@ -22,6 +22,9 @@
       <input matInput type="text" class="form-input" formControlName="companyName" />
       <mat-error *ngIf="form.get('companyName')?.hasError('required')">Company name is required</mat-error>
     </mat-form-field>
-    <button mat-button type="submit" class="create-form__button" [disabled]="form.invalid">CREATE USER</button>
+    <button class="cancel__button" mat-raised-button color="primary" (click)="onCancel()">No, Thanks</button>
+    <button mat-raised-button color="primary" (click)="onSave()" [disabled]="form.invalid">
+      {{ isEdit ? 'Save' : 'Add' }}
+    </button>
   </form>
 </div>
