@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div *ngIf="isShowImg" class="slogan">
+  <div class="slogan__container">
+    <img src="assets/ege-background.png" alt="фон ЕГЕ" class="slogan__img" />
+    <img src="../assets/big-vector.png" alt="чёрный вектор" class="slogan__black-img" />
+    <div class="slogan__text">Инструмент для вашего бизнеса</div>
+  </div>
+  <div class="slogan__items">
+    <div class="slogan__item">
+      <img src="assets/slogan-brick.svg" alt="слоган" class="slogan__item-img" />
+      <div class="slogan__item-text">
+        <strong>Большой ассортимент</strong>
+        <br />
+        строительных материалов всегда в наличии
+      </div>
+    </div>
+    <div class="slogan__item">
+      <img src="assets/slogan-car.svg" alt="слоган" class="slogan__item-img" />
+      <div class="slogan__item-text">
+        <strong>Доставка стройматериалов</strong>
+        <br />
+        в течении четырех часов или в любое удобное время
+      </div>
+    </div>
+    <div class="slogan__item">
+      <img src="assets/slogan-perfect.svg" alt="слоган" class="slogan__item-img" />
+      <div class="slogan__item-text">
+        Многоуровневая
+        <strong>
+          система
+          <br />
+          управления качеством
+        </strong>
+        по стандарту ISO 9001
+      </div>
+    </div>
+  </div>
+</div>
+<div class="catalog">
+  <div class="catalog__container">
+    <div class="catalog__pagination">
+      <a href="/" class="catalog__page" *ngFor="let item of newPages">{{ item }}</a>
+    </div>
+    <div class="catalog__cards">
+      <div class="catalog__card catalog__card--1">
+        <p class="catalog__card-text">Строительный отделочный инструмент</p>
+        <img src="assets\Construction-Finishing-Tools.png" alt="Строительный отделочный инструмент" class="catalog__card-img" />
+        <div class="catalog__reference">
+          <a href="/" class="catalog__reference-link">Перейти в каталог</a>
+          <img src="assets/arrow.svg" alt="стрелка" class="catalog__reference-arrow" />
+        </div>
+      </div>
+      <div class="catalog__card catalog__card--2">
+        <p class="catalog__card-text">Эмали</p>
+        <img src="assets/enamels.png" alt="эмали" class="catalog__card-img" />
+        <div class="catalog__reference">
+          <a href="/" class="catalog__reference-link">Перейти в каталог</a>
+          <img src="assets/arrow.svg" alt="стрелка" class="catalog__reference-arrow" />
+        </div>
+      </div>
+      <div class="catalog__card catalog__card--4">
+        <p class="catalog__card-text">
+          Пены, клеи и
+          <br />
+          герметики
+        </p>
+        <img src="assets\foams-adhesives-and-sealants.png" alt="" class="catalog__card-img" />
+        <div class="catalog__reference">
+          <a href="/" class="catalog__reference-link">Перейти в каталог</a>
+          <img src="assets/arrow.svg" alt="стрелка" class="catalog__reference-arrow" />
+        </div>
+      </div>
+      <div class="catalog__card catalog__card--3">
+        <p class="catalog__card-text">Лакокрасочные материалы</p>
+        <img src="assets\paint-and-varnish-materials.png" alt="" class="catalog__card-img" />
+        <div class="catalog__reference">
+          <a href="/" class="catalog__reference-link">Перейти в каталог</a>
+          <img src="assets/arrow.svg" alt="стрелка" class="catalog__reference-arrow" />
+        </div>
+      </div>
+      <div class="catalog__card catalog__card--5">
+        <p class="catalog__card-text">Розетки и выключатели</p>
+        <img src="assets\sockets-and-switches.png" alt="Розетки и выключатели" class="catalog__card-img" />
+        <div class="catalog__reference">
+          <a href="/" class="catalog__reference-link">Перейти в каталог</a>
+          <img src="assets/arrow.svg" alt="стрелка" class="catalog__reference-arrow" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.create-form__container {
+  margin: 30px;
+}
+.create-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.create-form__button {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.cancel__button {
+  margin-bottom: 20px;
+}

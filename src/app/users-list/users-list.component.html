@@ -1,6 +1,7 @@
+<app-header></app-header>
+<button (click)="openDialog()" mat-raised-button color="primary" class="users-list__add-button">Add User</button>
 <div class="users-list">
-	<div *ngFor="let item of users" class="users-list__user user">
-		<app-user-card [user]="item" (deleteUser)="deleteUser($event)"></app-user-card>
-	</div>
+  <div *ngFor="let item of users$ | async" class="users-list__user user" appShadowDirective>
+    <app-user-card [user]="item" (deleteUser)="onDeleteUser($event)" (editUser)="openDialog($event)"></app-user-card>
+  </div>
 </div>
-
